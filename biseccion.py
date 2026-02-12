@@ -1,7 +1,6 @@
 import math
 
 def biseccion(f, a, b, er, n):
-    """Algoritmo de Bisección compatible con Windows."""
     ei = 1.00           
     i = 0               
     m_anterior = None  
@@ -30,8 +29,8 @@ def biseccion(f, a, b, er, n):
     return m_actual, ei
 
 if __name__ == "__main__":
-    f = lambda x: math.exp(-x) - math.log(x)
-    a, b, er, n = 1, 1.5, 0.01, 100
+    f = lambda x: (x-2)**2 - math.log(x)
+    a, b, er, n = 1, 2, 0.04, 100
     
     raiz, error = biseccion(f, a, b, er, n)
     if raiz:
